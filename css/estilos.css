@@ -37,7 +37,7 @@ body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: var(--papel);
   color: var(--tinta);
-  line-height: 1.5;
+  line-height:  1.5;
 }
 
 main {
