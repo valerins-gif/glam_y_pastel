@@ -45,7 +45,7 @@ let carrito = [];
 const productosBD = [
   // Pijamas
   { id: 1, nombre: "Pijama Satin", modulo: "pijamas", precio: 45000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_NHdu5Auu4KbQpeA6-w_xQ54SWYmWpYfSgZt0ZmJjJZ1d4N1kHpM5bQo&s=10" },
-  { id: 2, nombre: "Set Pijama Satin Lilac", modulo: "pijamas", precio: 35000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqD2pSEqFVNcfSddiXxPGOoLzmuyzKyC_Lko_usJqx0Q&s=10" },
+  { id: 2, nombre: "Set Pijama Satin ", modulo: "pijamas", precio: 35000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqD2pSEqFVNcfSddiXxPGOoLzmuyzKyC_Lko_usJqx0Q&s=10" },
   { id: 3, nombre: "Set Pijama Durazno 3 pzas", modulo: "pijamas", precio: 40000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalhS7PFTm5DbkWVyJHUwTksYeQUGToCa2HMvsIHv8INZwUki8O2DkU-o&s=10" },
   { id: 4, nombre: "Set Pijama durazno corta", modulo: "pijamas", precio: 40000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNG4B7YSj0b7GbplmYE7g5mXSjmywyLFCww6HjNxm_0g5lXsXcnHiFIw&s=10" },
   
@@ -383,6 +383,7 @@ enlaceExterno.setAttribute("target", "_blank");
 enlaceExterno.setAttribute("rel", "noopener");
 enlaceExterno.setAttribute("title", "Visitar tendencias externas");
 enlaceExterno.textContent = "Explorar Tendencias Globales";
+
 
 
 // Misión 4: Ejecutar contador inicial
