@@ -213,6 +213,12 @@ function agregarAlCarrito(producto) {
   actualizarCarritoDOM();
 }
 
+// ELIMINAR UN PRODUCTO DEL CARRITO POR SU ÍNDICE
+function quitarDelCarrito(indice) {
+  carrito.splice(indice, 1);
+  actualizarCarritoDOM();
+}
+
 function actualizarCarritoDOM() {
   itemsCarritoContainer.innerHTML = "";
   if (carrito.length === 0) {
@@ -222,14 +228,25 @@ function actualizarCarritoDOM() {
   }
 
   let total = 0;
-  carrito.forEach((item) => {
+  carrito.forEach((item, index) => {
     total += item.precio;
     const fila = document.createElement("div");
     fila.className = "item-cart-fila";
+    fila.style.display = "flex";
+    fila.style.justifyContent = "space-between";
+    fila.style.alignItems = "center";
+    fila.style.marginBottom = "8px";
+
     fila.innerHTML = `
-      <span>${item.nombre}</span>
-      <strong>$${item.precio.toLocaleString('es-CO')}</strong>
+      <span>${item.nombre} - <strong>$${item.precio.toLocaleString('es-CO')}</strong></span>
+      <button type="button" class="btn-eliminar-cart" style="background: #f87171; color: white; border: none; padding: 4px 10px; border-radius: 12px; cursor: pointer; font-weight: bold;">❌</button>
     `;
+
+    // Escuchar el evento de eliminar
+    fila.querySelector(".btn-eliminar-cart").addEventListener("click", () => {
+      quitarDelCarrito(index);
+    });
+
     itemsCarritoContainer.appendChild(fila);
   });
 
@@ -383,8 +400,6 @@ enlaceExterno.setAttribute("target", "_blank");
 enlaceExterno.setAttribute("rel", "noopener");
 enlaceExterno.setAttribute("title", "Visitar tendencias externas");
 enlaceExterno.textContent = "Explorar Tendencias Globales";
-
-
 
 // Misión 4: Ejecutar contador inicial
 actualizarContador();
