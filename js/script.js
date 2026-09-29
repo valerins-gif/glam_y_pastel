@@ -213,7 +213,7 @@ function agregarAlCarrito(producto) {
   actualizarCarritoDOM();
 }
 
-// ELIMINAR UN PRODUCTO DEL CARRITO POR SU ÍNDICE
+// ELIMINAR UN PRODUCTO DEL CARRITO POR SU ÍNDICE 
 function quitarDelCarrito(indice) {
   carrito.splice(indice, 1);
   actualizarCarritoDOM();
