@@ -384,6 +384,7 @@ enlaceExterno.setAttribute("rel", "noopener");
 enlaceExterno.setAttribute("title", "Visitar tendencias externas");
 enlaceExterno.textContent = "Explorar Tendencias Globales";
 
+
 // Misión 4: Ejecutar contador inicial
 actualizarContador();
 
